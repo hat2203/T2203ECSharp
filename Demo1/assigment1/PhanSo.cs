@@ -17,6 +17,7 @@ namespace Demo1.assigment1
         }
         public void NhapPhanSo()
         {
+            Console.WriteLine("Vui long nhap phan so");
 
         }
 
@@ -27,15 +28,26 @@ namespace Demo1.assigment1
 
         public void RutGonPhanSo()
         {
-
+            int Ucln = 1;
+            for(int i= Math.Min(Math.Abs(TuSo),Math.Abs(MauSo)); i>1; i--)
+            {
+                if(TuSo % i == 0 && MauSo % i == 0)
+                {
+                    Ucln = i;
+                }
+            }
+            TuSo = TuSo / Ucln;
+            MauSo = MauSo / Ucln;
         }
 
         public void NghichDaoPhanSo()
         {
-
+            int tmp = TuSo;
+            TuSo = MauSo;
+            MauSo = tmp;
         }
 
-        public void Add()
+        public void Add(PhanSo f)
         {
 
         }
