@@ -18,6 +18,10 @@ namespace Demo1.assigment1
         public void NhapPhanSo()
         {
             Console.WriteLine("Vui long nhap phan so");
+            Console.Write("Tu so: ");
+            this.TuSo = int.Parse(Console.ReadLine());
+            Console.Write("Mau so: ");
+            this.MauSo = int.Parse(Console.ReadLine());
 
         }
 
@@ -47,24 +51,40 @@ namespace Demo1.assigment1
             MauSo = tmp;
         }
 
-        public void Add(PhanSo f)
+        public PhanSo Add(PhanSo f)
         {
-
+            PhanSo tong = new PhanSo();
+            tong.TuSo = (this.TuSo * f.MauSo) + (this.MauSo * f.TuSo);
+            tong.MauSo = this.MauSo * f.MauSo;
+            tong.RutGonPhanSo();
+            return tong;
         }
 
-        public void Sub()
+        public PhanSo Sub(PhanSo f)
         {
-
+            PhanSo hieu = new PhanSo();
+            hieu.TuSo = (this.TuSo * f.MauSo) - (this.MauSo * f.TuSo);
+            hieu.MauSo = this.MauSo * f.MauSo;
+            hieu.RutGonPhanSo();
+            return hieu;
         }
 
-        public void Mul()
+        public PhanSo Mul(PhanSo f)
         {
-
+            PhanSo tich = new PhanSo();
+            tich.TuSo = this.TuSo * f.TuSo;
+            tich.MauSo = this.MauSo * f.MauSo;
+            tich.RutGonPhanSo();
+            return tich;
         }
 
-        public void Div()
+        public PhanSo Div(PhanSo f)
         {
-
+            PhanSo thuong = new PhanSo();
+            thuong.TuSo = this.TuSo * f.MauSo;
+            thuong.MauSo = this.MauSo * f.TuSo;
+            thuong.RutGonPhanSo();
+            return thuong;
         }
 
     }

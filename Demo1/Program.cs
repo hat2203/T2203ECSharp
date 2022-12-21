@@ -37,11 +37,19 @@ namespace Demo1
             }
 
             PhanSo ps = new PhanSo();
-            ps.TuSo = 2;
-            ps.MauSo = 4;
-            //ps.RutGonPhanSo();
+            ps.NhapPhanSo();
+            ps.RutGonPhanSo();
+            ps.InPhanSo();
             ps.NghichDaoPhanSo();
             ps.InPhanSo();
+
+            PhanSo ps2 = new PhanSo();
+            ps2.NhapPhanSo();
+            ps2.InPhanSo();
+
+            PhanSo f = ps.Add(ps2);
+            f.InPhanSo();
+            
         }
     }
 }
