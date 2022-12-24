@@ -46,43 +46,43 @@ namespace Demo1.assigment1
 
         public void NghichDaoPhanSo()
         {
-            int tmp = TuSo;
+            int z = TuSo;
             TuSo = MauSo;
-            MauSo = tmp;
+            MauSo = z;
         }
 
-        public PhanSo Add(PhanSo f)
+        public PhanSo Add(PhanSo ps)
         {
             PhanSo tong = new PhanSo();
-            tong.TuSo = (this.TuSo * f.MauSo) + (this.MauSo * f.TuSo);
-            tong.MauSo = this.MauSo * f.MauSo;
+            tong.TuSo = (this.TuSo * ps.MauSo) + (this.MauSo * ps.TuSo);
+            tong.MauSo = this.MauSo * ps.MauSo;
             tong.RutGonPhanSo();
             return tong;
         }
 
-        public PhanSo Sub(PhanSo f)
+        public PhanSo Sub(PhanSo ps)
         {
             PhanSo hieu = new PhanSo();
-            hieu.TuSo = (this.TuSo * f.MauSo) - (this.MauSo * f.TuSo);
-            hieu.MauSo = this.MauSo * f.MauSo;
+            hieu.TuSo = (this.TuSo * ps.MauSo) - (this.MauSo * ps.TuSo);
+            hieu.MauSo = this.MauSo * ps.MauSo;
             hieu.RutGonPhanSo();
             return hieu;
         }
 
-        public PhanSo Mul(PhanSo f)
+        public PhanSo Mul(PhanSo ps)
         {
             PhanSo tich = new PhanSo();
-            tich.TuSo = this.TuSo * f.TuSo;
-            tich.MauSo = this.MauSo * f.MauSo;
+            tich.TuSo = this.TuSo * ps.TuSo;
+            tich.MauSo = this.MauSo * ps.MauSo;
             tich.RutGonPhanSo();
             return tich;
         }
 
-        public PhanSo Div(PhanSo f)
+        public PhanSo Div(PhanSo ps)
         {
             PhanSo thuong = new PhanSo();
-            thuong.TuSo = this.TuSo * f.MauSo;
-            thuong.MauSo = this.MauSo * f.TuSo;
+            thuong.TuSo = this.TuSo * ps.MauSo;
+            thuong.MauSo = this.MauSo * ps.TuSo;
             thuong.RutGonPhanSo();
             return thuong;
         }
