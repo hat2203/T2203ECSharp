@@ -1,4 +1,5 @@
 ﻿using Demo1.assigment1;
+using Demo1.assigment2;
 using Demo1.session1;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,38 @@ namespace Demo1
     internal class Program
     {
         static void Main(string[] args)
+        {
+            PhoneBook pb = new PhoneBook();
+            pb.InsertPhone("Nguyen Van Anh", "0236553996");
+            pb.InsertPhone("Nguyen Van Tu", "0338984053");
+            pb.InsertPhone("Nguyen Van Anh", "0179227185");
+            pb.InsertPhone("Nguyen Van Anh", "0236553996");
+            pb.InsertPhone("Nguyen Van Lam", "0989225618");
+
+            foreach(PhoneNumber pn in pb.pList)
+            {
+                Console.WriteLine(pb.ToString());
+            }
+        }
+        static void Main1(string[] args)
+        {
+            try
+            {
+                int x = 10;
+                int y = 0;
+                throw new Exception("Y bang 0 mat roi, khong the chia cho 0");
+                float z = x/ y;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+
+            }
+        }
+        static void Main2(string[] args)
         {
             Human h = new Human();
             h.Run();
