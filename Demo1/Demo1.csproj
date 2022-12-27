@@ -55,6 +55,8 @@
     <Compile Include="session3\FPTStudent.cs" />
     <Compile Include="session3\IHuman.cs" />
     <Compile Include="session3\IStuddent.cs" />
+    <Compile Include="session4\DemoDelegate.cs" />
+    <Compile Include="session4\DemoEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

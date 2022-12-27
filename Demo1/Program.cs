@@ -1,6 +1,7 @@
 ﻿using Demo1.assigment1;
 using Demo1.assigment2;
 using Demo1.session1;
+using Demo1.session4;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,23 @@ namespace Demo1
     internal class Program
     {
         static void Main(string[] args)
+        {
+            StringToVoid stv = new StringToVoid(ShowMessage);
+            StringToVoid stv2 = new StringToVoid(DemoDelegate.SayHello);
+            StringToVoid stv3 = new StringToVoid(new DemoDelegate().ShowInfor);
+
+            stv += DemoDelegate.SayHello;
+            stv("xin chao cac ban");
+
+            DemoEvent de = new DemoEvent();
+            de.Invoke();
+
+        }
+        static void ShowMessage(string msg)
+        {
+            Console.WriteLine(msg);
+        }
+        static void Main3(string[] args)
         {
             PhoneBook pb = new PhoneBook();
             pb.InsertPhone("Nguyen Van Anh", "0236553996");
