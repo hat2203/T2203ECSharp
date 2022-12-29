@@ -3,10 +3,12 @@ using Demo1.assigment2;
 using Demo1.assigment3;
 using Demo1.session1;
 using Demo1.session4;
+using Demo1.session5;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Demo1
@@ -14,6 +16,80 @@ namespace Demo1
     internal class Program
     {
         static void Main(string[] args)
+        {
+            Fetch();
+        }
+        static async void Fetch()
+        {
+            CallApi ca = new CallApi();
+            Product s = await ca.FetchData();
+            Console.WriteLine(s.ToString());
+        }
+        static void Main6(string[] args)
+        {
+            //Thread t1 = new Thread(ThreadRun);
+            //Thread t2 = new Thread(ThreadRunParam);
+            //t2.IsBackground = true;
+            //t1.Start();
+            //t2.Start("Done");
+
+            Number num = new Number()
+            {
+                X = 0,
+                Y = 0
+            };
+            Thread n1 = new Thread(ThreadLock);
+            Thread n2 = new Thread(ThreadLock);
+            n1.Start(num);
+            n2.Start(num);
+            
+        }
+
+        static void ThreadLock(object o)
+        {
+
+            Number n = (Number)o;
+            for(int i=0; i<20; i++)
+            {
+                lock (n)
+                {
+                    n.ChangeXY();
+                    n.PrintXY();
+                }
+                try
+                {
+
+                    Thread.Sleep(1000);
+                }catch(Exception e) { }
+            }
+        }
+
+        static void ThreadRun()
+        {
+            for(int i = 0; i <20; i++)
+            {
+                Console.WriteLine("i= " + i);
+                try 
+                {
+                    Thread.Sleep(1000);
+                }
+                catch(Exception e) { }
+            }
+        }
+
+        static void ThreadRunParam(object msg)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine("i= " + i + " Msg: "+msg);
+                try
+                {
+                    Thread.Sleep(1000);
+                }
+                catch (Exception e) { }
+            }
+        }
+        static void Main5(string[] args)
         {
             VietNam a = new VietNam(1, "Nguyen Van A", "30/12/2020", 20, "Ca nhan");
             Console.WriteLine(a.Total());
