@@ -1,5 +1,6 @@
 ﻿using Demo1.assigment1;
 using Demo1.assigment2;
+using Demo1.assigment3;
 using Demo1.session1;
 using Demo1.session4;
 using System;
@@ -13,6 +14,14 @@ namespace Demo1
     internal class Program
     {
         static void Main(string[] args)
+        {
+            VietNam a = new VietNam(1, "Nguyen Van A", "30/12/2020", 20, "Ca nhan");
+            Console.WriteLine(a.Total());
+            NgoaiQuoc n = new NgoaiQuoc(2, "Jonh", "30/12/2020", 15, "US");
+            Console.WriteLine(n.Total());
+        }
+
+        static void Main4(string[] args)
         {
             StringToVoid stv = new StringToVoid(ShowMessage);
             StringToVoid stv2 = new StringToVoid(DemoDelegate.SayHello);

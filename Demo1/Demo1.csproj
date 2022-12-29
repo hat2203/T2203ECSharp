@@ -47,6 +47,9 @@
     <Compile Include="assigment2\Phone.cs" />
     <Compile Include="assigment2\PhoneBook.cs" />
     <Compile Include="assigment2\PhoneNumber.cs" />
+    <Compile Include="assigment3\Customer.cs" />
+    <Compile Include="assigment3\NgoaiQuoc.cs" />
+    <Compile Include="assigment3\VietNam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="session3\AbstractStudent.cs" />
