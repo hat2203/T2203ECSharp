@@ -1,6 +1,7 @@
 ﻿using Demo1.assigment1;
 using Demo1.assigment2;
 using Demo1.assigment3;
+using Demo1.assigment4;
 using Demo1.session1;
 using Demo1.session4;
 using Demo1.session5;
@@ -21,9 +22,13 @@ namespace Demo1
         }
         static async void Fetch()
         {
-            CallApi ca = new CallApi();
-            Product s = await ca.FetchData();
-            Console.WriteLine(s.ToString());
+            CallApiWeather ca = new CallApiWeather();
+            ApiWeather aw = await ca.FetchData();
+            Console.WriteLine(aw.ToString());
+
+            //CallApi ca = new CallApi();
+            //Product s = await ca.FetchData();
+            //Console.WriteLine(s.ToString());
         }
         static void Main6(string[] args)
         {

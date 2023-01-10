@@ -56,6 +56,10 @@
     <Compile Include="assigment3\Customer.cs" />
     <Compile Include="assigment3\NgoaiQuoc.cs" />
     <Compile Include="assigment3\VietNam.cs" />
+    <Compile Include="assigment4\CallApiWeather.cs" />
+    <Compile Include="assigment4\Weather.cs" />
+    <Compile Include="assigment5\House.cs" />
+    <Compile Include="assigment5\IHouse.cs" />
     <Compile Include="Number.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
